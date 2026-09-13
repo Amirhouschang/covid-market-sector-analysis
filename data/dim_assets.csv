@@ -1,0 +1,25 @@
+AssetID,Sector,Company,Ticker,Currency
+1,Technology,Microsoft,MSFT,USD
+2,Technology,NVIDIA,NVDA,USD
+3,Technology,Adobe,ADBE,USD
+4,Technology,Salesforce,CRM,USD
+5,Technology,Cisco,CSCO,USD
+6,Technology,Technology Select Sector SPDR ETF,XLK,USD
+7,Pharmaceuticals,Pfizer,PFE,USD
+8,Pharmaceuticals,AbbVie,ABBV,USD
+9,Pharmaceuticals,Abbott Laboratories,ABT,USD
+10,Pharmaceuticals,Johnson & Johnson,JNJ,USD
+11,Pharmaceuticals,Eli Lilly,LLY,USD
+12,Pharmaceuticals,Health Care Select Sector SPDR ETF,XLV,USD
+13,Travel,Booking Holdings,BKNG,USD
+14,Travel,Expedia,EXPE,USD
+15,Travel,Marriott,MAR,USD
+16,Travel,Delta Air Lines,DAL,USD
+17,Travel,Carnival,CCL,USD
+18,Travel,U.S. Global Jets ETF,JETS,USD
+19,Entertainment,Netflix,NFLX,USD
+20,Entertainment,Disney,DIS,USD
+21,Entertainment,Warner Bros. Discovery,WBD,USD
+22,Entertainment,Take-Two Interactive,TTWO,USD
+23,Entertainment,Live Nation Entertainment,LYV,USD
+24,Entertainment,Comcast,CMCSA,USD
