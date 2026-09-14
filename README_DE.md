@@ -1,6 +1,6 @@
 # Auswirkungen der COVID-19-Pandemie auf Marktsektoren (2018–2023)
 
-**Sprache:** [English](README.md) | Deutsch
+**Sprache:** Deutsch | [English](README.md)
 
 Dieses Portfolio-Projekt analysiert, wie sich vier Marktsektoren — **Technologie, Pharma, Reisen und Unterhaltung** — vor, während und nach der COVID-19-Pandemie entwickelt haben.
 
