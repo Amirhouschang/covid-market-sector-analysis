@@ -188,14 +188,14 @@ Die bereinigten Marktdaten werden in ein dimensionales Modell überführt.
 |---|---|---|
 | `fact_prices` | Faktentabelle | `AssetID`, `DateID`, Open, High, Low, Close, Volume |
 | `dim_assets` | Asset-Dimension | `AssetID`, Company, Sector, Ticker, Currency |
-| `dim_date` | Datumsdimension | `DateID`, Date, Year, Quarter, Month, Weekday, Period |
+| `dim_date` | Datumsdimension | `DateID`, Date, Year, Quarter, Month, MonthName, Week, Weekday, WeekdayName |
 
 Beziehungen:
 
 - `dim_assets (1) → fact_prices (*)`
 - `dim_date (1) → fact_prices (*)`
 
-Das Feld `Period` ordnet jeden Handelstag der Pre-COVID-, COVID- oder Post-COVID-Phase zu. Es ist einmal in der Datumsdimension definiert, sodass die Periodenlogik in Python und Power BI identisch ist.
+Das Feld `Period` ist nicht in der exportierten CSV enthalten. Es ist getrennt im Notebook (`eda_data`) und als berechnete Spalte im Power-BI-Modell definiert, mit denselben Grenzen: 2018–2019, 2020–2021, 2022–2023.
 
 Das Power-BI-Modell enthält zusätzlich eine eigene `_Measures`-Tabelle für DAX-Measures.
 
@@ -275,14 +275,14 @@ Der Power-BI-Bericht verwendet DAX-Measures für gleichgewichtete Renditen, Base
 
 # Projekt ausführen
 
-Die exportierten CSV-Dateien in `data/` erlauben es, das Projekt zu prüfen, ohne die Marktdaten erneut herunterzuladen.
+Die exportierten CSV-Dateien in `data/` enthalten die finalen Star-Schema-Daten und können ohne Ausführen des Notebooks geprüft oder in SQL und Power BI geladen werden.
 
 ```bash
 pip install pandas matplotlib yfinance jupyter
 jupyter notebook covid_sector_analysis.ipynb
 ```
 
-Ein vollständiger Notebook-Lauf lädt die Marktdaten erneut von Yahoo Finance herunter und überschreibt die Dateien in `data/`.
+Das Notebook lädt die Marktdaten immer von Yahoo Finance herunter und liest die CSV-Dateien in `data/` nicht ein. Ein vollständiger Lauf schreibt `dim_assets.csv`, `dim_date.csv` und `fact_prices.csv` in das Arbeitsverzeichnis des Notebooks, nicht nach `data/`.
 
 ## Konventionen
 
